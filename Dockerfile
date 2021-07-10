@@ -6,7 +6,7 @@ RUN npm config set registry=http://registry.npm.taobao.org && npm config set scr
 
 WORKDIR /build
 COPY . /build/
-RUN npm install && npm dist:prod
+RUN npm install && npm run dist:prod
 
 WORKDIR /build/dist
 RUN npm install
